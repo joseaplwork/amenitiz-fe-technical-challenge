@@ -1,27 +1,46 @@
-# Amenitiz Front-end Technical Challange 🚀
+# Getting Started with Create React App
 
-## Introduction
+This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-The task is to create a wiki of Chess Grandmasters as defined by Chess.com. We are open to different layouts and styles.
+## Available Scripts
 
-### What we are looking for:
-- This exercise should be done in React with Typescript. 
-- We do not expect production-ready code. However, we do expect the candidate to point out sub-optimal compromises taken to complete the task
+In the project directory, you can run:
 
-📖 Documentation for chess.com's API can be found here: https://www.chess.com/news/view/published-data-api#pubapi-endpoint-games-archive
+### `npm start`
 
-## ♟️ Step 1: List the Grandmasters
+Runs the app in the development mode.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-Using the chess.com API, create a page that lists all the Grandmasters.
+The page will reload if you make edits.\
+You will also see any lint errors in the console.
 
-API endpoint: https://api.chess.com/pub/titled/GM
+### `npm test`
 
-## ♟️ Step 2: Grandmaster profile page
+Launches the test runner in the interactive watch mode.\
+See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-Extend the page that you created for the previous step so that if you click on a listed grandmaster, it should take you to a profile page displaying the information from the player endpoint.
+### `npm run build`
 
-API endpoint for player: [https://api.chess.com/pub/player/{username}](https://api.chess.com/pub/player/john)
+Builds the app for production to the `build` folder.\
+It correctly bundles React in production mode and optimizes the build for the best performance.
 
-## ♟️ Step 3: Add Grandmaster summary
+The build is minified and the filenames include the hashes.\
+Your app is ready to be deployed!
 
-On the profile page for a grandmaster that you created in step 2, add a clock that displays the amount of time since they were last online. The time since the user was active should be displayed as HH:MM:SS, and it should update every second.
+See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+### `npm run eject`
+
+**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+
+If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+
+Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+
+You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+
+## Learn More
+
+You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+To learn React, check out the [React documentation](https://reactjs.org/).
