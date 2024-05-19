@@ -5,7 +5,7 @@
   "singleQuote": true,
   "semi": true,
   "importOrder": [
-    "^@components/(.*)$",
+    "^@app/(.*)$",
     "^../",
     "^[./].*(?<!\\.(c|le|sc)ss)$",
     "\\.(c|le|sc)ss$",
