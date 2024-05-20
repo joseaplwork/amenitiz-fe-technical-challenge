@@ -15,15 +15,11 @@
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint src --ext .ts,.tsx",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "prepare": "husky"
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": "eslint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
+    "*.{ts,tsx}": "eslint --fix"
   },
   "eslintConfig": {
     "extends": [

@@ -1,5 +1,9 @@
 import React from 'react';
 
-export function Button(props: { children: React.ReactNode }) {
-  return <button>{props.children}</button>;
+interface Props {
+  children: React.ReactNode;
+}
+
+export function Button({ children }: Props) {
+  return <button type="button">{children}</button>;
 }
