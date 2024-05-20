@@ -1,11 +1,10 @@
 import { render, screen } from '@testing-library/react';
-import React from 'react';
 
-import { HomePage } from './home-page.component';
+import { HomePageContainer } from './home-page.container';
 
 describe('HomePage', () => {
   it('renders', () => {
-    render(<HomePage />);
+    render(<HomePageContainer />);
 
     expect(screen.getByText('Hello World')).toBeInTheDocument();
   });

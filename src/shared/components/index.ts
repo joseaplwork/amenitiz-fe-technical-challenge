@@ -1,1 +1,2 @@
-export * from './button/button.component';
+export * from './error-view.component';
+export * from './layout.component';
