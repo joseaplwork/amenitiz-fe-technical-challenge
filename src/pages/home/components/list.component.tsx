@@ -9,8 +9,8 @@ export function List({ chessMasters }: Props) {
     <div className="grid lg:grid-cols-2 gap-5">
       {chessMasters.map((chessMaster) => (
         <Link
-          to={`/chess-master/${chessMaster}`}
           key={chessMaster}
+          to={`/chess-master/${chessMaster}`}
           className="block p-5 w-full bg-primary-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition duration-200 ease-in-out"
         >
           <span>Chess master</span>
