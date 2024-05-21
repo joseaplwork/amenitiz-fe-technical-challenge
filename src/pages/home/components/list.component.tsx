@@ -10,7 +10,7 @@ export function List({ chessMasters }: Props) {
       {chessMasters.map((chessMaster) => (
         <Link
           key={chessMaster}
-          to={`/chess-master/${chessMaster}`}
+          to={`/profile/${chessMaster}`}
           className="block p-5 w-full bg-primary-50 border border-gray-200 rounded-lg shadow hover:shadow-lg transition duration-200 ease-in-out"
         >
           <span>Chess master</span>

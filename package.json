@@ -15,8 +15,20 @@
     "build": "craco build",
     "test": "craco test",
     "lint": "eslint src --ext .ts,.tsx",
+    "test:coverage": "npm test -- --coverage --watchAll=false",
     "eject": "react-scripts eject",
     "prepare": "husky"
+  },
+  "jest": {
+    "moduleNameMapper": {
+      "^@app/(.*)$": "<rootDir>/src/$1"
+    },
+    "collectCoverageFrom": [
+      "src/**/*.{ts,tsx}",
+      "!src/index.tsx",
+      "!src/reportWebVitals.ts",
+      "!src/react-app-env.d.ts"
+    ]
   },
   "lint-staged": {
     "*.{ts,tsx}": "eslint --fix"
@@ -61,6 +73,17 @@
         }
       ]
     },
+    "overrides": [
+      {
+        "files": [
+          "**/*.spec.tsx",
+          "**/*.test.tsx"
+        ],
+        "rules": {
+          "import/no-extraneous-dependencies": "off"
+        }
+      }
+    ],
     "env": {
       "browser": true,
       "node": true
