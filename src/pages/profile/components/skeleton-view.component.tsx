@@ -1,6 +1,6 @@
 export function SkeletonView() {
   return (
-    <div className="flex flex-col animate-pulse">
+    <div data-testid="skeleton-loader" className="flex flex-col animate-pulse">
       <div className="flex items-center">
         <div className="w-12 h-12 mr-5 bg-gray-200 rounded-full" />
         <div className="w-40 h-7 bg-gray-200" />

@@ -1,5 +1,3 @@
-import { Link } from 'react-router-dom';
-
 import { ErrorView } from '@app/shared/components';
 import { ChessMaster } from '@app/shared/models';
 
@@ -24,9 +22,6 @@ export function ProfilePage({ loading, error, chessMaster }: Props) {
 
   return (
     <>
-      <Link to="/" className="block text-primary-800 py-2 mb-5">
-        {'< back to home'}
-      </Link>
       <Header chessMaster={chessMaster} />
       <Content chessMaster={chessMaster} />
     </>

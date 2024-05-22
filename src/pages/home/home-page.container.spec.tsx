@@ -20,7 +20,17 @@ describe('HomePage', () => {
     } as Response);
   };
 
-  it('renders list of chess masters after successfully loading the chess master request', async () => {
+  it('should render the skeleton loader when rendered', async () => {
+    render(
+      <MemoryRouter>
+        <HomePageContainer />
+      </MemoryRouter>,
+    );
+
+    expect(await screen.findByTestId('skeleton-loader')).toBeInTheDocument();
+  });
+
+  it('should render list of chess masters after successfully loading the chess master request', async () => {
     resolveRequestMock();
 
     render(
@@ -34,7 +44,7 @@ describe('HomePage', () => {
     expect(screen.getByText('player2')).toBeInTheDocument();
   });
 
-  it('renders empty view if chess master response is empty', async () => {
+  it('should render empty view if chess master response is empty', async () => {
     resolveRequestMock([]);
 
     render(
@@ -46,7 +56,7 @@ describe('HomePage', () => {
     expect(await screen.findByText('No results')).toBeInTheDocument();
   });
 
-  it('renders error view if something goes wrong in the chess master request', async () => {
+  it('should render error view if something goes wrong in the chess master request', async () => {
     rejectRequestMock();
 
     render(
@@ -58,7 +68,7 @@ describe('HomePage', () => {
     expect(await screen.findByText('Something went wrong')).toBeInTheDocument();
   });
 
-  it('renders the search bar input', async () => {
+  it('should render the search bar input', async () => {
     resolveRequestMock();
 
     render(
@@ -74,7 +84,7 @@ describe('HomePage', () => {
     );
   });
 
-  it('renders filtered chess masters', async () => {
+  it('should render filtered chess masters', async () => {
     resolveRequestMock();
 
     render(
@@ -91,6 +101,7 @@ describe('HomePage', () => {
     expect(await screen.findByText('player1')).toBeInTheDocument();
     expect(screen.queryByText('player2')).not.toBeInTheDocument();
   });
+
   it('redirects to chess master profile page', async () => {
     resolveRequestMock();
 

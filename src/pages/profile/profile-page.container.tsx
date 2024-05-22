@@ -1,4 +1,4 @@
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 
 import { Layout } from '@app/shared/components';
 
@@ -11,6 +11,9 @@ export function ProfilePageContainer() {
 
   return (
     <Layout>
+      <Link to="/" className="block text-primary-800 py-2 mb-5">
+        {'< back to home'}
+      </Link>
       <ProfilePage loading={loading} error={error} chessMaster={chessMaster} />
     </Layout>
   );

@@ -1,6 +1,6 @@
 export function SkeletonView() {
   return (
-    <div className="grid lg:grid-cols-2 gap-5">
+    <div data-testid="skeleton-loader" className="grid lg:grid-cols-2 gap-5">
       {Array.from({ length: 14 }).map((_, index) => (
         <div
           key={index}
