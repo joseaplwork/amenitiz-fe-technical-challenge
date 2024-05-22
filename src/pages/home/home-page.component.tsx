@@ -23,9 +23,5 @@ export function HomePage({ chessMasters, loading, error }: Props) {
     return <EmptyView />;
   }
 
-  return (
-    <div>
-      <List chessMasters={chessMasters} />
-    </div>
-  );
+  return <List chessMasters={chessMasters} />;
 }
