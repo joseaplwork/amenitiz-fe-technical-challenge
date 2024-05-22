@@ -4,7 +4,7 @@ import { Layout } from '@app/shared/components';
 
 import { SearchBar } from './components/search-bar.component';
 import { HomePage } from './home-page.component';
-import { useFetchAllChessMasters } from './hooks/use-fetch-chess-master.hook';
+import { useFetchAllChessMasters } from './hooks/use-fetch-all-chess-masters.hook';
 import { filterChessMasters } from './services/filter-chess-masters.service';
 
 export function HomePageContainer() {

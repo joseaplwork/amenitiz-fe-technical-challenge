@@ -1,4 +1,4 @@
-# Amenitiz Front-end Technical Challange 🚀
+# Amenitiz Front-end Technical Challenge 🚀
 
 ## Introduction
 

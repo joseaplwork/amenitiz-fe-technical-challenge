@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom';
 
-import { HomePageContainer } from '@app/pages';
+import { HomePageContainer, ProfilePageContainer } from '@app/pages';
 
 import reportWebVitals from './reportWebVitals';
 
@@ -12,6 +12,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomePageContainer />,
+  },
+  {
+    path: '/profile/:id',
+    element: <ProfilePageContainer />,
   },
 ]);
 
