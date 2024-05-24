@@ -1,6 +1,6 @@
 ## Project requirements
 
-This project required:
+This project requires:
 
 - Nodejs 20 or higher, you can use `nvm use` to se the current version with the node version manager
 
