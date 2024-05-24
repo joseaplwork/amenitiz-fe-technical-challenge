@@ -1,3 +1,9 @@
+## Project requirements
+
+This project required:
+
+- Nodejs 20 or higher, you can use `nvm use` to se the current version with the node version manager
+
 ## Available Scripts
 
 In the project directory, you can run:
