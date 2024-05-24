@@ -17,6 +17,8 @@ describe('useFetchFromServer hook', () => {
     if (error) {
       return <div>error</div>;
     }
+
+    return null;
   }
 
   it('should handle loading state while fetching data', async () => {
