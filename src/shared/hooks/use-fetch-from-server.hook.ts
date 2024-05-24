@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export function useRequestFromServer<T>(
+export function useFetchFromServer<T>(
   caller: (id?: string) => Promise<T>,
   initialValue = null,
 ) {

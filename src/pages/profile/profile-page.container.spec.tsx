@@ -113,7 +113,26 @@ describe('ProfilePage', () => {
     render(<ProfilePageWithRouteParams />);
 
     expect(await screen.findByText('Chess Master 123')).toBeInTheDocument();
-    expect(screen.queryByTitle('more than a day ago')).not.toBeInTheDocument();
+    expect(screen.getByText('more than a day ago')).toBeInTheDocument();
+  });
+
+  it('should render the past hours since chess master was online', async () => {
+    const lastOnlineDate = new Date(1716113826 * 1000);
+    const mockDate = new Date(1716123826 * 1000);
+    jest
+      .spyOn(global, 'Date')
+      .mockImplementationOnce(() => lastOnlineDate as any)
+      .mockImplementation(() => mockDate as any);
+
+    resolveRequestMock({
+      ...mockData,
+      last_online: 1716113826,
+    });
+
+    render(<ProfilePageWithRouteParams />);
+
+    expect(await screen.findByText('Chess Master 123')).toBeInTheDocument();
+    expect(screen.getByText('02:46:40')).toBeInTheDocument();
   });
 
   it('should render the error view if something goes wrong in the request', async () => {
